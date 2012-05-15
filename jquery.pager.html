@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pager test</title>
+<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.pager.js"></script>
+
+<link rel="stylesheet" href="css/reset.css" />
+<style type="text/css"><!--
+body {
+	font: 9pt/1.5em Arial, Helvetica, sans-serif;
+}
+
+#main {
+	width:960px;
+	margin:0 auto;
+}
+
+table {
+	clear:both;
+	width:100%;
+}
+
+th {
+	background:#666666 none;
+	color:#FFFFFF;
+}
+
+td {
+	color:#FFFFFF;
+}
+
+.even {
+	background:#000099 none;
+}
+
+.odd {
+	background:#003333 none;
+}
+
+/* pager styles */
+.pager .synopsis {
+	float:left;
+	margin:10px 0 20px 0;
+	background-color:#FFFFCC;
+}
+
+.pager .synopsis > .title {
+	font-weight:bold;
+	color:#FF6600;
+}
+
+.pager .synopsis > .element {
+	color:#FF0033;
+}
+
+.pager {
+}
+
+.pager .controls {
+	float:right;
+	margin-top:10px;	
+}
+
+.pager .control {
+	text-decoration:none;
+	color:#0000ff;
+}
+
+.pager .control:hover {
+	text-decoration:underline;
+}
+
+.pager .controls .pages > .active {
+	color:red;
+	font-weight:bold;
+}
+
+-->
+</style>
+
+<script type="text/javascript"><!--
+$(document).ready(function() {
+	$("#pager").pager(25, 5, 2, {
+		showSynopsis: true,
+		initialPage:2,
+		cloneControls: ["pager-controls-clone", "pager-controls-clone-2"],
+		onPageChange: function(event, page, pages) {}
+	});
+	
+});
+//-->
+</script>
+</head>
+
+<body>
+<div id="main">
+
+	<div id="pager" class="pager">
+        <div class="synopsis">
+            <span class="title">Search Results:</span> Showing <span class="element hit-index-low">1</span>-<span class="element hit-index-high">15</span> of <span class="element total-hits">200</span> matched results
+        </div>
+        
+        <div class="controls">
+                <a href="" class="control prev ">Previous</a>
+                <span class="pages">page navigation</span>
+                <a href="" class="control next ">Next</a>
+        </div>
+    </div>
+	
+	<table cellspacing="0" cellpadding="0" border="0">
+		<tr class="table-header">
+			<th>Column1</th>
+			<th>Column2</th>
+			<th>Column3</th>
+		</tr>
+	
+	<tbody id="page1" style="display:none">
+		<tr class="odd">
+			<td>page1: col1</td>
+			<td>page1: col2</td>
+			<td>page1: col3</td>
+		</tr>
+		
+		<tr class="even">
+			<td>page1: col1</td>
+			<td>page1: col2</td>
+			<td>page1: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page1: col1</td>
+			<td>page1: col2</td>
+			<td>page1: col3</td>
+		</tr>
+	
+		<tr class="even">
+			<td>page1: col1</td>
+			<td>page1: col2</td>
+			<td>page1: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page1: col1</td>
+			<td>page1: col2</td>
+			<td>page1: col3</td>
+		</tr>
+	</tbody>
+	
+	<tbody id="page2" style="display:none">
+		<tr class="odd">
+			<td>page2: col1</td>
+			<td>page2: col2</td>
+			<td>page2: col3</td>
+		</tr>
+		
+		<tr class="even">
+			<td>page2: col1</td>
+			<td>page2: col2</td>
+			<td>page2: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page2: col1</td>
+			<td>page2: col2</td>
+			<td>page2: col3</td>
+		</tr>
+	
+		<tr class="even">
+			<td>page2: col1</td>
+			<td>page2: col2</td>
+			<td>page2: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page2: col1</td>
+			<td>page2: col2</td>
+			<td>page2: col3</td>
+		</tr>
+	</tbody>
+	
+	<tbody id="page3" style="display:none">
+		<tr class="odd">
+			<td>page3: col1</td>
+			<td>page3: col2</td>
+			<td>page3: col3</td>
+		</tr>
+		
+		<tr class="even">
+			<td>page3: col1</td>
+			<td>page3: col2</td>
+			<td>page3: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page3: col1</td>
+			<td>page3: col2</td>
+			<td>page3: col3</td>
+		</tr>
+	
+		<tr class="even">
+			<td>page3: col1</td>
+			<td>page3: col2</td>
+			<td>page3: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page3: col1</td>
+			<td>page3: col2</td>
+			<td>page3: col3</td>
+		</tr>
+	</tbody>
+	
+	<tbody id="page4" style="display:none">
+		<tr class="odd">
+			<td>page4: col1</td>
+			<td>page4: col2</td>
+			<td>page4: col3</td>
+		</tr>
+		
+		<tr class="even">
+			<td>page4: col1</td>
+			<td>page4: col2</td>
+			<td>page4: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page4: col1</td>
+			<td>page4: col2</td>
+			<td>page4: col3</td>
+		</tr>
+	
+		<tr class="even">
+			<td>page4: col1</td>
+			<td>page4: col2</td>
+			<td>page4: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page4: col1</td>
+			<td>page4: col2</td>
+			<td>page4: col3</td>
+		</tr>
+	</tbody>
+	
+	<tbody id="page5" style="display:none">
+		<tr class="odd">
+			<td>page5: col1</td>
+			<td>page5: col2</td>
+			<td>page5: col3</td>
+		</tr>
+		
+		<tr class="even">
+			<td>page5: col1</td>
+			<td>page5: col2</td>
+			<td>page5: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page5: col1</td>
+			<td>page5: col2</td>
+			<td>page5: col3</td>
+		</tr>
+	
+		<tr class="even">
+			<td>page5: col1</td>
+			<td>page5: col2</td>
+			<td>page5: col3</td>
+		</tr>
+	
+		<tr class="odd">
+			<td>page5: col1</td>
+			<td>page5: col2</td>
+			<td>page5: col3</td>
+		</tr>
+	</tbody>
+	
+	</table>
+	
+	<div class="search-controls-bottom" style="clear:both">
+        <div class="pager" id="pager-controls-clone">
+            <div class="synopsis"><span class="title">Search Results:</span> Showing <span class="element hit-index-low">1</span>-<span class="element hit-index-high">15</span> of <span class="element total-hits">200</span> matched results</div>
+            
+            <div class="controls">
+                <a href="" class="control prev ">Previous</a>
+                <span class="pages">page navigation</span>
+                <a href="" class="control next ">Next</a>
+            </div>
+        </div>
+	</div>
+    
+	<div class="search-controls-bottom" style="clear:both">
+        <div class="pager" id="pager-controls-clone-2">
+            <div class="synopsis"><span class="title">Search Results:</span> Showing <span class="element hit-index-low">1</span>-<span class="element hit-index-high">15</span> of <span class="element total-hits">200</span> matched results</div>
+            
+            <div class="controls">
+                <a href="" class="control prev ">Previous</a>
+                <span class="pages">page navigation</span>
+                <a href="" class="control next ">Next</a>
+            </div>
+        </div>
+	</div>
+    
+	
+</div><!-- /#main -->
+
+</body>
+</html>
